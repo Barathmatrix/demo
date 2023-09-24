@@ -1,6 +1,7 @@
 package com.example.demo.student;
 
 import java.time.LocalDate;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,7 +18,7 @@ public class StudentController {
     }
 
   	@GetMapping
-	public Student getStudent(){
+	public List<Student> getStudent(){
 		return StudentService.getStudent();
 	}  
 }
